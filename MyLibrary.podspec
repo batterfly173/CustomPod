@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "MyLibrary"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "Best Library"
   spec.homepage     = "https://github.com/batterfly173/CustomPod"
   spec.license      = { :type => "MIT", :file => "LICENSE" }

@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://github.com/batterfly173/CustomPod"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author             = { "Evgeny" => "evgenyf021@gmail.com" }
-  spec.platform     = :ios, "13.0"
+  spec.platform     = :ios, "9.0"
   spec.source       = { :git => "https://github.com/batterfly173/CustomPod.git", :tag => spec.version.to_s }
   spec.source_files  = "ToDoItem.{swift}"
   spec.swift_versions = '5.0'

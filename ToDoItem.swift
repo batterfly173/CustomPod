@@ -1,32 +1,32 @@
 import Foundation
 
-let formatterJson: DateFormatter = {
+public let formatterJson: DateFormatter = {
     let dateFormatter = DateFormatter()
     dateFormatter.dateStyle = .short
     return dateFormatter
 }()
 
-enum Priority: String
+public enum Priority: String
 {
     case none
     case usual
     case important
 }
 
-struct ToDoItem
+public struct ToDoItem
 {
-    let id: String
-    let text: String
-    let priority: Priority
-    let deadLine: Date?
-    var isDone: Bool
+    public let id: String
+    public let text: String
+    public let priority: Priority
+    public let deadLine: Date?
+    public var isDone: Bool
     
-    let createdAt: Int
-    var updatedAt: Int
+    public let createdAt: Int
+    public var updatedAt: Int
     
-    var isDirty: Bool
+    public var isDirty: Bool
     
-    init(id: String = UUID().uuidString, text: String, priority: Priority, deadLine: Date? = nil, isDone: Bool)
+    public init(id: String = UUID().uuidString, text: String, priority: Priority, deadLine: Date? = nil, isDone: Bool)
     {
         self.id = id
         self.text = text
@@ -42,7 +42,7 @@ struct ToDoItem
 
 extension ToDoItem
 {
-    var json: Any {
+    public var json: Any {
         
         var jsonResult: [String : Any] = [:]
         
@@ -65,7 +65,7 @@ extension ToDoItem
     }
     
     
-    static func parse(json: Any) -> ToDoItem?
+    public static func parse(json: Any) -> ToDoItem?
     {
         guard let json = json as? [String: Any] else { return nil }
 
